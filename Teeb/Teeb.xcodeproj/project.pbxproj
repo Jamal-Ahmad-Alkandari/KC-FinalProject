@@ -11,6 +11,10 @@
 		21BB793C28BABE48005A7D9D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB793B28BABE48005A7D9D /* ContentView.swift */; };
 		21BB793E28BABE4A005A7D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BB793D28BABE4A005A7D9D /* Assets.xcassets */; };
 		21BB794128BABE4A005A7D9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21BB794028BABE4A005A7D9D /* Preview Assets.xcassets */; };
+		21BB794828BBB363005A7D9D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794728BBB363005A7D9D /* HomeView.swift */; };
+		21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794B28BBB60B005A7D9D /* ShopsModle.swift */; };
+		21BB794E28BBB72A005A7D9D /* ProductModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794D28BBB72A005A7D9D /* ProductModle.swift */; };
+		21BB795028BBD373005A7D9D /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794F28BBD373005A7D9D /* Shopping.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		21BB793B28BABE48005A7D9D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		21BB793D28BABE4A005A7D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21BB794028BABE4A005A7D9D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		21BB794728BBB363005A7D9D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		21BB794B28BBB60B005A7D9D /* ShopsModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModle.swift; sourceTree = "<group>"; };
+		21BB794D28BBB72A005A7D9D /* ProductModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModle.swift; sourceTree = "<group>"; };
+		21BB794F28BBD373005A7D9D /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				21BB793928BABE48005A7D9D /* TeebApp.swift */,
 				21BB793B28BABE48005A7D9D /* ContentView.swift */,
+				21BB794728BBB363005A7D9D /* HomeView.swift */,
+				21BB794B28BBB60B005A7D9D /* ShopsModle.swift */,
+				21BB794D28BBB72A005A7D9D /* ProductModle.swift */,
+				21BB794F28BBD373005A7D9D /* Shopping.swift */,
 				21BB793D28BABE4A005A7D9D /* Assets.xcassets */,
 				21BB793F28BABE4A005A7D9D /* Preview Content */,
 			);
@@ -137,6 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BB794828BBB363005A7D9D /* HomeView.swift in Sources */,
+				21BB795028BBD373005A7D9D /* Shopping.swift in Sources */,
+				21BB794E28BBB72A005A7D9D /* ProductModle.swift in Sources */,
+				21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */,
 				21BB793C28BABE48005A7D9D /* ContentView.swift in Sources */,
 				21BB793A28BABE48005A7D9D /* TeebApp.swift in Sources */,
 			);

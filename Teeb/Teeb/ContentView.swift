@@ -19,26 +19,33 @@ struct ContentView: View { // Content View -->
                 
                 
                 VStack { // Vstack -->
-                    Image("Teeb Icon")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 300, height: 300 )
-                        .cornerRadius(200)
                     
                     
                     Text("Welcome to Teeb")
                         .font(.system(size: 40, design: .serif))
                         .padding()
-                        .background(.white.opacity(0.4))
-                        .cornerRadius(20)
+                        .foregroundColor(.white)
                     
-    //                Button {
-    //                    eij
-    //                } label: {
-    //                    Text("Click Here")
-    //                }
+                    Image("Teeb Icon")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 300, height: 300 )
+                        .cornerRadius(200)
+                    Spacer()
+                    
+                    
+                    NavigationLink(destination: HomeView()){ // Navigation Link -->
+                        Text("Click here to continue")
+                           .font(.system(size:30, design: .serif))
+                           .padding()
+                           .background(.white.opacity(0.4))
+                           .cornerRadius(20)
+                    } // Navigation Link <--
+                    Spacer()
+                    
 
 
+                        
                 
                     
                     
@@ -62,5 +69,6 @@ struct ContentView: View { // Content View -->
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewDevice("iPhone 12 Pro")
     }
 }
