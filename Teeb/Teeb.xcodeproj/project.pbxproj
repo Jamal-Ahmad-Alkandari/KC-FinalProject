@@ -15,6 +15,7 @@
 		21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794B28BBB60B005A7D9D /* ShopsModle.swift */; };
 		21BB794E28BBB72A005A7D9D /* ProductModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794D28BBB72A005A7D9D /* ProductModle.swift */; };
 		21BB795028BBD373005A7D9D /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794F28BBD373005A7D9D /* Shopping.swift */; };
+		21BB795C28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21BB795B28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,10 @@
 		21BB794B28BBB60B005A7D9D /* ShopsModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsModle.swift; sourceTree = "<group>"; };
 		21BB794D28BBB72A005A7D9D /* ProductModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModle.swift; sourceTree = "<group>"; };
 		21BB794F28BBD373005A7D9D /* Shopping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping.swift; sourceTree = "<group>"; };
+		21BB795728BCE8E9005A7D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21BB795A28BCED50005A7D9D /* YanoneKaffeesatz-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		21BB795B28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		21BB795D28BCED7D005A7D9D /* Lemonada-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lemonada-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +64,9 @@
 		21BB793828BABE48005A7D9D /* Teeb */ = {
 			isa = PBXGroup;
 			children = (
+				21BB795728BCE8E9005A7D9D /* Info.plist */,
 				21BB793928BABE48005A7D9D /* TeebApp.swift */,
+				21BB795928BCED3D005A7D9D /* fonts */,
 				21BB793B28BABE48005A7D9D /* ContentView.swift */,
 				21BB794728BBB363005A7D9D /* HomeView.swift */,
 				21BB794B28BBB60B005A7D9D /* ShopsModle.swift */,
@@ -77,6 +84,16 @@
 				21BB794028BABE4A005A7D9D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		21BB795928BCED3D005A7D9D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				21BB795D28BCED7D005A7D9D /* Lemonada-VariableFont_wght.ttf */,
+				21BB795B28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf */,
+				21BB795A28BCED50005A7D9D /* YanoneKaffeesatz-VariableFont_wght.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BB795C28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */,
 				21BB794128BABE4A005A7D9D /* Preview Assets.xcassets in Resources */,
 				21BB793E28BABE4A005A7D9D /* Assets.xcassets in Resources */,
 			);
@@ -285,6 +303,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Teeb/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Teeb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -313,6 +332,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Teeb/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Teeb/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

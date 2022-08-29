@@ -13,7 +13,23 @@ struct HomeView: View { // Home View -->
     var body: some View { // Body -->
         
         
+//
+//        TO do list :-
+//           - change the text style
+//           - change the list background color
+//           - finish the shopping page
+        
+        
+        
+        
+        
+        
+        
+        
+        
         List  { // List -->
+            
+            
             
             
             
@@ -21,6 +37,7 @@ struct HomeView: View { // Home View -->
             ForEach (shops) { shop in // For Each -->
                 NavigationLink {
                     Shopping()
+                    
                 } label: { // Navigation Link Lable -->
                     HStack{ // Hstack -->
                         
@@ -37,6 +54,7 @@ struct HomeView: View { // Home View -->
                         
                         
                     } // Hstack <--
+                    
                     
                 } // Navigation Link Lable <--
                 

@@ -12,17 +12,28 @@ struct ContentView: View { // Content View -->
         
         NavigationView{ // Navigation View -->
             
+            
+            
+            
+            
+            // Lemonada-VariableFont_wght.ttf
+            // PlayfairDisplay-VariableFont_wght.ttf
+            // YanoneKaffeesatz-VariableFont_wght.ttf
+            
+            
             ZStack{ // Zstack -->
                 
-                Color(#colorLiteral(red: 0.6868261695, green: 0.5022581816, blue: 0, alpha: 1))
+                Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1))
+                
                     .ignoresSafeArea()
                 
                 
                 VStack { // Vstack -->
                     
                     
-                    Text("Welcome to Teeb")
-                        .font(.system(size: 40, design: .serif))
+                    Text("Welcome To Teeb")
+                        .font(.custom("Lemonada-VariableFont_wght", size: 40))
+                       // .font(.system(size: 40, design: .serif))
                         .padding()
                         .foregroundColor(.white)
                     
@@ -34,12 +45,14 @@ struct ContentView: View { // Content View -->
                     Spacer()
                     
                     
-                    NavigationLink(destination: HomeView()){ // Navigation Link -->
-                        Text("Click here to continue")
+                    NavigationLink(destination: HomeView().navigationTitle("Teeb Stores")){ // Navigation Link -->
+                        Text("Click Here To Continue")
                            .font(.system(size:30, design: .serif))
                            .padding()
                            .background(.white.opacity(0.4))
                            .cornerRadius(20)
+                        
+                        
                     } // Navigation Link <--
                     Spacer()
                     
