@@ -75,7 +75,7 @@ struct ContentView: View { // Content View -->
             } // Zstack <--
             
             
-            
+           // .navigationBarTitleDisplayMode(.inline)
             
         } // Navigation View <--
         

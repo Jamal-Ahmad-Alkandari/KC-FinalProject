@@ -36,7 +36,7 @@ struct HomeView: View { // Home View -->
             
             ForEach (shops) { shop in // For Each -->
                 NavigationLink {
-                    Shopping(shop: shop)
+                    Shopping(shop: shop  )
                     
                 } label: { // Navigation Link Lable -->
                     HStack{ // Hstack -->
@@ -55,7 +55,8 @@ struct HomeView: View { // Home View -->
                         
                         
                     } // Hstack <--
-                    
+                   
+                   
                     
                 } // Navigation Link Lable <--
                 

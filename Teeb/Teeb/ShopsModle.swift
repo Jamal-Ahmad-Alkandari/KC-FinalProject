@@ -9,7 +9,7 @@ import Foundation
 
 struct ShopsModle : Identifiable {
     
-    let id = UUID()
+    var id = UUID()
     
     var name : String
     var logo : String

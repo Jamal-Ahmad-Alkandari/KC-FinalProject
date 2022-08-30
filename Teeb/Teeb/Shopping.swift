@@ -10,7 +10,9 @@ import SwiftUI
 struct Shopping: View { // struct -->
     
     var shop : ShopsModle
-    
+//    @StateObject var cartManager = CartManager()
+//    @EnvironmentObject var cartManage : CartManager
+
     var body: some View { // Body -->
         
         
@@ -21,11 +23,11 @@ struct Shopping: View { // struct -->
                 Image(shop.logo)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 130, height: 130)
                     .cornerRadius(20)
                 Spacer()
                 Text(shop.name)
-                    .font(.system(size: 30))
+                    .font(.system(size: 25))
 
                 
             }.padding()
@@ -61,38 +63,39 @@ struct Shopping: View { // struct -->
                             .font(.system(size: 25))
                             .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                         
-                    }// Hstack <--
+                    }
+                    
+                    // Hstack <--
                     
                     } // Product For Each <--
                     
                
-                
+               // .navigationTitle("Shopping Page")
+              
                 
                
                 
             }.padding() // List <--
             
-            HStack{
+           
+            HStack{ // Hstack -->
                 
-                Image(systemName: "cart")
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-                    .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                    .foregroundColor(.white)
-                    .frame(width: 60, height: 60)
-                    .cornerRadius(20)
-                    .padding()
-                Spacer()
+            } // Hstack <--
+            .toolbar{ // Tool Bar -->
                 
+                NavigationLink{
+                    CartPage()
+                } label: {
+                    Cart(productNum: 1)
+                }
                 
-            }
-            
+            } // Tool Bar <--
            
                 
             
             
-        } // Vstack <--
+        }
+        // Vstack <--
         
     } // Body <--
     
@@ -101,12 +104,14 @@ struct Shopping: View { // struct -->
 
 struct Shopping_Previews: PreviewProvider {
     static var previews: some View {
+        
         Shopping(shop: ShopsModle(name: "Terengganu", logo: "Terengganu logo", products: [
             ProductModle(productImage: "جوره دبل سوبر", productName: "جوره دبل سوبر", price: 25),
             ProductModle(productImage: "سيلاني شوشني", productName: "سيلاني شوشني", price: 170),
             ProductModle(productImage: "سيوفي أسود", productName: "سيوفي أسود", price: 20),
             ProductModle(productImage: "فلبيني دبل فيس", productName: "فلبيني دبل فيس", price: 200)
                                                                                            ])
-)
+        )
+        //.environmentObject(CartManager())
     }
 }
