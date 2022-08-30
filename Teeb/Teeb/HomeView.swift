@@ -36,7 +36,7 @@ struct HomeView: View { // Home View -->
             
             ForEach (shops) { shop in // For Each -->
                 NavigationLink {
-                    Shopping()
+                    Shopping(shop: shop)
                     
                 } label: { // Navigation Link Lable -->
                     HStack{ // Hstack -->
@@ -45,6 +45,7 @@ struct HomeView: View { // Home View -->
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100 )
+                            .cornerRadius(20)
                         Spacer()
                         Text(shop.name)
                             .font(.system(size: 20))

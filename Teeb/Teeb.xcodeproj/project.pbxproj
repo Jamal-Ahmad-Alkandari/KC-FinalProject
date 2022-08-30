@@ -16,6 +16,8 @@
 		21BB794E28BBB72A005A7D9D /* ProductModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794D28BBB72A005A7D9D /* ProductModle.swift */; };
 		21BB795028BBD373005A7D9D /* Shopping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB794F28BBD373005A7D9D /* Shopping.swift */; };
 		21BB795C28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21BB795B28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf */; };
+		21BB795F28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21BB795E28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf */; };
+		21BB796128BCF06F005A7D9D /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796028BCF06F005A7D9D /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		21BB795A28BCED50005A7D9D /* YanoneKaffeesatz-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YanoneKaffeesatz-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		21BB795B28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		21BB795D28BCED7D005A7D9D /* Lemonada-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lemonada-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		21BB795E28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		21BB796028BCF06F005A7D9D /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				21BB794728BBB363005A7D9D /* HomeView.swift */,
 				21BB794B28BBB60B005A7D9D /* ShopsModle.swift */,
 				21BB794D28BBB72A005A7D9D /* ProductModle.swift */,
+				21BB796028BCF06F005A7D9D /* Cart.swift */,
 				21BB794F28BBD373005A7D9D /* Shopping.swift */,
 				21BB793D28BABE4A005A7D9D /* Assets.xcassets */,
 				21BB793F28BABE4A005A7D9D /* Preview Content */,
@@ -90,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				21BB795D28BCED7D005A7D9D /* Lemonada-VariableFont_wght.ttf */,
+				21BB795E28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf */,
 				21BB795B28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf */,
 				21BB795A28BCED50005A7D9D /* YanoneKaffeesatz-VariableFont_wght.ttf */,
 			);
@@ -154,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21BB795F28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf in Resources */,
 				21BB795C28BCED76005A7D9D /* PlayfairDisplay-Italic-VariableFont_wght.ttf in Resources */,
 				21BB794128BABE4A005A7D9D /* Preview Assets.xcassets in Resources */,
 				21BB793E28BABE4A005A7D9D /* Assets.xcassets in Resources */,
@@ -170,6 +177,7 @@
 				21BB794828BBB363005A7D9D /* HomeView.swift in Sources */,
 				21BB795028BBD373005A7D9D /* Shopping.swift in Sources */,
 				21BB794E28BBB72A005A7D9D /* ProductModle.swift in Sources */,
+				21BB796128BCF06F005A7D9D /* Cart.swift in Sources */,
 				21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */,
 				21BB793C28BABE48005A7D9D /* ContentView.swift in Sources */,
 				21BB793A28BABE48005A7D9D /* TeebApp.swift in Sources */,

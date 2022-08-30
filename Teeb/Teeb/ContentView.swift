@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View { // Content View -->
+    
+    
+    
+    
     var body: some View { // Body -->
         
         NavigationView{ // Navigation View -->
@@ -16,9 +20,10 @@ struct ContentView: View { // Content View -->
             
             
             
-            // Lemonada-VariableFont_wght.ttf
-            // PlayfairDisplay-VariableFont_wght.ttf
-            // YanoneKaffeesatz-VariableFont_wght.ttf
+            // Lemonada-VariableFont_wght
+            // PlayfairDisplay-VariableFont_wght
+            // YanoneKaffeesatz-VariableFont_wght
+            // Cairo-VariableFont_wght
             
             
             ZStack{ // Zstack -->
@@ -32,8 +37,8 @@ struct ContentView: View { // Content View -->
                     
                     
                     Text("Welcome To Teeb")
-                        .font(.custom("Lemonada-VariableFont_wght", size: 40))
-                       // .font(.system(size: 40, design: .serif))
+                        // .font(.custom("Cairo-VariableFont_wght", size: 40))
+                        .font(.system(size: 40, design: .serif))
                         .padding()
                         .foregroundColor(.white)
                     

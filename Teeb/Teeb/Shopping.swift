@@ -9,39 +9,34 @@ import SwiftUI
 
 struct Shopping: View { // struct -->
     
+    var shop : ShopsModle
     
     var body: some View { // Body -->
         
         
         
         VStack { // Vstack -->
-            
-            
-            ForEach (shops) { shop in // For Each -->
-                HStack{ // Hstack -->
-                    
-                    Image(shop.logo)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 100, height: 100 )
-                        .padding()
-                    Spacer()
-                    Text(shop.name)
-                        .font(.system(size: 30))
-                    Spacer()
-                    
-                    
-                    
-                    
-                } // Hstack <--
-            }
-            
+            HStack{
+                
+                Image(shop.logo)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150)
+                    .cornerRadius(20)
+                Spacer()
+                Text(shop.name)
+                    .font(.system(size: 30))
+
+                
+            }.padding()
+          
+              
             
             ScrollView{ // List -->
                 
-                ForEach (shops) { shop in // For Each -->
+               
                     
-                    ForEach (shop.products) { product in  // Product For Each -->
+                ForEach (shop.products) { product in  // Product For Each -->
                         
                         
                    
@@ -63,12 +58,14 @@ struct Shopping: View { // struct -->
                         Spacer()
                         
                         Image(systemName: "plus.circle")
+                            .font(.system(size: 25))
+                            .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                         
                     }// Hstack <--
                     
                     } // Product For Each <--
                     
-                } // For Each <--
+               
                 
                 
                
@@ -82,6 +79,7 @@ struct Shopping: View { // struct -->
                     .scaledToFit()
                     .padding()
                     .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                    .foregroundColor(.white)
                     .frame(width: 60, height: 60)
                     .cornerRadius(20)
                     .padding()
@@ -103,6 +101,12 @@ struct Shopping: View { // struct -->
 
 struct Shopping_Previews: PreviewProvider {
     static var previews: some View {
-        Shopping()
+        Shopping(shop: ShopsModle(name: "Terengganu", logo: "Terengganu logo", products: [
+            ProductModle(productImage: "جوره دبل سوبر", productName: "جوره دبل سوبر", price: 25),
+            ProductModle(productImage: "سيلاني شوشني", productName: "سيلاني شوشني", price: 170),
+            ProductModle(productImage: "سيوفي أسود", productName: "سيوفي أسود", price: 20),
+            ProductModle(productImage: "فلبيني دبل فيس", productName: "فلبيني دبل فيس", price: 200)
+                                                                                           ])
+)
     }
 }
