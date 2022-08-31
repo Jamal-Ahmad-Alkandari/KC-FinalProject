@@ -10,8 +10,9 @@ import SwiftUI
 struct Shopping: View { // struct -->
     
     var shop : ShopsModle
-//    @StateObject var cartManager = CartManager()
-//    @EnvironmentObject var cartManage : CartManager
+    @State var productNum : Int
+    @State var total : Double
+
 
     var body: some View { // Body -->
         
@@ -50,6 +51,7 @@ struct Shopping: View { // struct -->
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100 )
+                            .cornerRadius(10)
                         Spacer()
                         
                         Text(product.productName)
@@ -62,43 +64,90 @@ struct Shopping: View { // struct -->
                         Image(systemName: "plus.circle")
                             .font(.system(size: 25))
                             .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                            .onTapGesture { // On Tap -->
+                                
+                                total += product.price
+                                productNum += 1
+                            } // On Tap <--
                         
-                    }
-                    
-                    // Hstack <--
+                    } // Hstack <--
                     
                     } // Product For Each <--
                     
                
-               // .navigationTitle("Shopping Page")
+           
               
                 
                
                 
             }.padding() // List <--
             
-           
-            HStack{ // Hstack -->
+            
+            NavigationLink {
+                CartPage(shop: shop, productNum: 1, total: 0.000)
+            } label: {
+                HStack { // Hstack -->
+                    
+                    if productNum >= 0 { // if -->
+                        
+                        Text("\(productNum)")
+                            .font(.system(size: 25))
+                            .font(.caption2)
+                            .foregroundColor(.white)
+                            .frame (width: 40, height: 40)
+                            .background(Color.white.opacity(0.15))
+                            .cornerRadius(10)
+                            .padding(.leading)
+                           
+                      
+                        
+                    } // if <--
+            
+                    Text("View Cart")
+                        .font(.system(size: 25))
+                        .foregroundColor(.white)
+                        .padding()
+                    Spacer()
+                    
+                    Text("\(total, specifier: "%.3f")K.D")
+                        .font(.system(size: 20))
+                        .foregroundColor(Color.white)
+                        .padding()
+                        .cornerRadius(10)
+                       
                 
-            } // Hstack <--
-            .toolbar{ // Tool Bar -->
+                    
+                  
+                    
+                       
+                } // Hstack <--
+                .frame(width: 370, height: 70)
+                .background(Color((#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1))))
+                .cornerRadius(10)
+                .padding()
+            
+            }
+
                 
-                NavigationLink{
-                    CartPage()
-                } label: {
-                    Cart(productNum: 1)
-                }
+               
                 
-            } // Tool Bar <--
-           
+                
+                
                 
             
+
             
-        }
-        // Vstack <--
+            
+
+            
+            
+            
+        } // Vstack <--
         
     } // Body <--
     
+    
+   
     
 } // struct <--
 
@@ -110,8 +159,8 @@ struct Shopping_Previews: PreviewProvider {
             ProductModle(productImage: "سيلاني شوشني", productName: "سيلاني شوشني", price: 170),
             ProductModle(productImage: "سيوفي أسود", productName: "سيوفي أسود", price: 20),
             ProductModle(productImage: "فلبيني دبل فيس", productName: "فلبيني دبل فيس", price: 200)
-                                                                                           ])
+        ]), productNum: 0, total: 0.000
         )
-        //.environmentObject(CartManager())
+       
     }
 }

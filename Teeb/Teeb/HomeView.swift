@@ -36,7 +36,7 @@ struct HomeView: View { // Home View -->
             
             ForEach (shops) { shop in // For Each -->
                 NavigationLink {
-                    Shopping(shop: shop  )
+                    Shopping(shop: shop, productNum: 0, total: 0.000  )
                     
                 } label: { // Navigation Link Lable -->
                     HStack{ // Hstack -->
