@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ProductModle : Identifiable {
+struct ProductModle : Identifiable, Equatable {
     let id = UUID()
     
     var productImage : String

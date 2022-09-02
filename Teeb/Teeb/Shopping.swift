@@ -12,9 +12,12 @@ struct Shopping: View { // struct -->
     var shop : ShopsModle
     @State var productNum : Int
     @State var total : Double
+    
+    @State var Itams: [ProductModle] = []
 
 
     var body: some View { // Body -->
+        
         
         
         
@@ -49,7 +52,7 @@ struct Shopping: View { // struct -->
                         
                         Image(product.productImage)
                             .resizable()
-                            .scaledToFit()
+                            .scaledToFill()
                             .frame(width: 100, height: 100 )
                             .cornerRadius(10)
                         Spacer()
@@ -68,6 +71,8 @@ struct Shopping: View { // struct -->
                                 
                                 total += product.price
                                 productNum += 1
+                                Itams.append(product)
+                                
                             } // On Tap <--
                         
                     } // Hstack <--
@@ -84,7 +89,8 @@ struct Shopping: View { // struct -->
             
             
             NavigationLink {
-                CartPage(shop: shop, productNum: 1, total: 0.000)
+                //CartPage(shop: shop, productNum: 1, total: 0.000, Items: Itams)
+                CartPage(productNum: 0, total: $total, Items: $Itams, shop: shop)
             } label: {
                 HStack { // Hstack -->
                     

@@ -38,6 +38,8 @@ var WoodChips = ShopsModle(name: "Wood Chips", logo: "Wood Chips logo", products
 
 ])
 
+
+
 var shops = [Terengganu , WoodChips]
 
 
