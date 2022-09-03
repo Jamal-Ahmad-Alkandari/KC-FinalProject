@@ -89,8 +89,7 @@ struct Shopping: View { // struct -->
             
             
             NavigationLink {
-                //CartPage(shop: shop, productNum: 1, total: 0.000, Items: Itams)
-                CartPage(productNum: 0, total: $total, Items: $Itams, shop: shop)
+                CartPage(productNum: $productNum, total: $total, Items: $Itams, shop: shop, action: {})
             } label: {
                 HStack { // Hstack -->
                     
