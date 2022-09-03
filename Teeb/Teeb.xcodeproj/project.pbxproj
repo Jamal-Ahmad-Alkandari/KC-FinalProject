@@ -19,6 +19,7 @@
 		21BB795F28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21BB795E28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf */; };
 		21BB796328BEA83A005A7D9D /* CartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796228BEA83A005A7D9D /* CartPage.swift */; };
 		21BB796928C38799005A7D9D /* CheckOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796828C38799005A7D9D /* CheckOut.swift */; };
+		21BB796B28C401C3005A7D9D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796A28C401C3005A7D9D /* SignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		21BB795E28BCEF61005A7D9D /* Cairo-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cairo-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		21BB796228BEA83A005A7D9D /* CartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPage.swift; sourceTree = "<group>"; };
 		21BB796828C38799005A7D9D /* CheckOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOut.swift; sourceTree = "<group>"; };
+		21BB796A28C401C3005A7D9D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				21BB796228BEA83A005A7D9D /* CartPage.swift */,
 				21BB794F28BBD373005A7D9D /* Shopping.swift */,
 				21BB796828C38799005A7D9D /* CheckOut.swift */,
+				21BB796A28C401C3005A7D9D /* SignUp.swift */,
 				21BB793D28BABE4A005A7D9D /* Assets.xcassets */,
 				21BB793F28BABE4A005A7D9D /* Preview Content */,
 			);
@@ -184,6 +187,7 @@
 				21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */,
 				21BB793C28BABE48005A7D9D /* ContentView.swift in Sources */,
 				21BB793A28BABE48005A7D9D /* TeebApp.swift in Sources */,
+				21BB796B28C401C3005A7D9D /* SignUp.swift in Sources */,
 				21BB796928C38799005A7D9D /* CheckOut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

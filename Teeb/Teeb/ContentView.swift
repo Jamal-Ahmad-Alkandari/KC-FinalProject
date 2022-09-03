@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ContentView: View { // Content View -->
     
-    
+    @State var Email = ""
+    @State var Passwoord = ""
     
     
     var body: some View { // Body -->
@@ -49,25 +50,62 @@ struct ContentView: View { // Content View -->
                         .cornerRadius(200)
                     Spacer()
                     
+                 
                     
-                    NavigationLink(destination: HomeView().navigationTitle("Teeb Stores")){ // Navigation Link -->
-                        Text("Click Here To Continue")
-                           .font(.system(size:30, design: .serif))
-                           .padding()
-                           .background(.white.opacity(0.4))
-                           .cornerRadius(20)
-                        
-                        
-                    } // Navigation Link <--
+                    VStack { // Vstack -->
+                        TextField("E-mail", text: $Email)
+                            .padding()
+                            .background(.white)
+                        .cornerRadius(5)
+               
+                    
+                    SecureField("Password", text: $Passwoord)
+                         .padding()
+                         .background(.white)
+                         .cornerRadius(5)
+                    } // Vstack <--
+
                     Spacer()
                     
+                    HStack{ // Hstack -->
+                        
+                     
+                        
+                        NavigationLink(destination: HomeView().navigationTitle("Teeb Stores")){ // Navigation Link -->
+                            Text("Login")
+                               .font(.system(size:30, design: .serif))
+                               .foregroundColor(.white)
+                               .padding()
+                               .background(Color(#colorLiteral(red: 0.3985515237, green: 0.277300179, blue: 0.0639796108, alpha: 1)).opacity(0.85))
+                               .cornerRadius(10)
+                            
+
+                        } // Navigation Link <--
+                        
+                       NavigationLink(destination: SignUp().navigationTitle("Sign Up")){ // Navigation Link -->
+                            Text("Sign Up")
+                               .font(.system(size:30, design: .serif))
+                               .foregroundColor(.white)
+                               .padding()
+                               .background(Color(#colorLiteral(red: 0.3985515237, green: 0.277300179, blue: 0.0639796108, alpha: 1)).opacity(0.85))
+                               .cornerRadius(10)
+                            
+
+                        } // Navigation Link <--
+                        
+                        
+                    } // Hstack <--
+                    
+                   
 
 
                         
                 
                     
                     
-                } // Vstack <--
+                }
+                .padding()
+                // Vstack <--
                 
                 
                 

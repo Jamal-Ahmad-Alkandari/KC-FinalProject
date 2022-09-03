@@ -38,9 +38,21 @@ var WoodChips = ShopsModle(name: "Wood Chips", logo: "Wood Chips logo", products
 
 ])
 
+var kinnah = ShopsModle(name: "Kinnah", logo: "Kinnah logo", products: [
+    ProductModle(productImage: "بيبي سيلاني", productName: "بيبي سيلاني", price: 20),
+    ProductModle(productImage: "فلبيني جواهر", productName: "فلبيني جواهر", price: 80),
+    ProductModle(productImage: "سيلاني كلوانا قواقع", productName: "سيلاني كلوانا قواقع", price: 80),
+    ProductModle(productImage: "رويال موري", productName: "رويال موري", price: 30),
+    ProductModle(productImage: "فلبيني السعادة", productName: "فلبيني السعادة", price: 90),
+    ProductModle(productImage: "كمبودي الأجداد", productName: "كمبودي الأجداد", price: 180),
+    ProductModle(productImage: "تراد تربل سوبر", productName: "تراد تربل سوبر", price: 30),
+    ProductModle(productImage: "سيوفي هندي", productName: "سيوفي هندي", price: 15),
+    ProductModle(productImage: "كمبودي", productName: "كمبودي", price: 250)
+    ])
 
 
-var shops = [Terengganu , WoodChips]
+
+var shops = [Terengganu , WoodChips, kinnah]
 
 
 

@@ -13,12 +13,7 @@ struct HomeView: View { // Home View -->
     var body: some View { // Body -->
         
         
-//
-//        TO do list :-
-//           - change the text style
-//           - change the list background color
-//           - finish the shopping page
-        
+
         
         
         
