@@ -119,13 +119,13 @@ struct SignUp: View { // Struct -->
                             TextField("State", text: $state)
                                 .textFieldStyle(.roundedBorder)
                                 .font(.system(size: 25))
-                                .frame(width: 170)
+                                .frame(width: 130)
                                 .cornerRadius(5)
                             
                             TextField("Area", text: $area)
                                 .textFieldStyle(.roundedBorder)
                                 .font(.system(size: 25))
-                                .frame(width: 170)
+                                .frame(width: 200)
                                 .cornerRadius(5)
                             
                         } // Hstack <--
@@ -134,16 +134,15 @@ struct SignUp: View { // Struct -->
                             TextField("Block", text: $block)
                                 .textFieldStyle(.roundedBorder)
                                 .font(.system(size: 25))
-                                .frame(width: 170)
+                                .frame(width: 85)
                                 .cornerRadius(5)
                                 .keyboardType(.numberPad)
                             
                             TextField("Street", text: $street)
                                 .textFieldStyle(.roundedBorder)
                                 .font(.system(size: 25))
-                                .frame(width: 170)
+                                .frame(width: 250)
                                 .cornerRadius(5)
-                                .keyboardType(.numberPad)
                             
                         } // Hstack <--
                         
