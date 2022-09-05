@@ -11,61 +11,71 @@ struct HomeView: View { // Home View -->
     
     
     var body: some View { // Body -->
-        
-        
 
-        
-        
-        
-        
-        
-        
-        
-        
-        List  { // List -->
-            
-            
-            
-            
-            
-            
-            ForEach (shops) { shop in // For Each -->
-                NavigationLink {
-                    Shopping(shop: shop, productNum: 0, total: 0.000  )
+        VStack { // Vstack -->
+            List  { // List -->
+                
+                
+                
+                
+                
+                
+                ForEach (shops) { shop in // For Each -->
+                    NavigationLink {
+                        Shopping(shop: shop, productNum: 0, total: 0.000  )
+                        
+                    } label: { // Navigation Link Lable -->
+                        HStack{ // Hstack -->
+                            
+                            Image(shop.logo)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100 )
+                                .cornerRadius(20)
+                            Spacer()
+                            Text(shop.name)
+                                .font(.system(size: 20))
+                            Spacer()
+                            
+                            
+                            
+                            
+                        } // Hstack <--
+                       
+                       
+                        
+                    } // Navigation Link Lable <--
                     
-                } label: { // Navigation Link Lable -->
-                    HStack{ // Hstack -->
-                        
-                        Image(shop.logo)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100 )
-                            .cornerRadius(20)
-                        Spacer()
-                        Text(shop.name)
-                            .font(.system(size: 20))
-                        Spacer()
-                        
-                        
-                        
-                        
-                    } // Hstack <--
-                   
-                   
                     
-                } // Navigation Link Lable <--
+                    
+                    
+                    
+                } // For Each <--
                 
                 
                 
-                
-                
-            } // For Each <--
+            }.listRowBackground(Color(#colorLiteral(red: 0.6868260503, green: 0.5022583008, blue: 0, alpha: 1)))
+                .navigationTitle("Teeb Stores")
+            // List <--
+            
+            
+//            TabView{
+//                HomeView()
+//                    .tabItem {
+//                        Image(systemName: "house")
+//                    }
+//               ProfileView()
+//                    .tabItem {
+//                        Image(systemName: "person")
+//                    }
+//            }
             
             
             
-        }.listRowBackground(Color(#colorLiteral(red: 0.6868260503, green: 0.5022583008, blue: 0, alpha: 1)))
-            .navigationTitle("Teeb Stores")
-        // List <--
+        }// Vstack <--
+        
+        
+        
         
         
     } // Body <--

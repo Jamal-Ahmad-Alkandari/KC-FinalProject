@@ -99,7 +99,7 @@ struct ContentView: View { // Content View -->
                             
                      
                         
-                        NavigationLink(destination: SignUp(Email: $Email, Password: $Password, PhoneNum: "", state: "", area: "", block: 1, street: "", house: 1, floor: 1, apartment: 1).navigationTitle("Sign Up")){ // Navigation Link -->
+                        NavigationLink(destination: SignUp(Email: $Email, Password: $Password, PhoneNum: "", state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "").navigationTitle("Sign Up")){ // Navigation Link -->
                             Text("Sign Up")
                                 .font(.system(size:30, design: .serif))
                                 .foregroundColor(.white)

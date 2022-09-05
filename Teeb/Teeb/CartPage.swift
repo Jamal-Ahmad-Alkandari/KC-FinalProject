@@ -161,7 +161,7 @@ struct CartPage_Previews: PreviewProvider {
     static var previews: some View {
 
         CartPage(productNum: .constant(0), total: .constant(0.000), Items: .constant([ProductModle(productImage: "جوره دبل سوبر", productName: "جوره دبل سوبر", price: 25)]), shop: ShopsModle(name: "Terengganu", logo: "Terengganu logo", products: []), action: {})
-            .preferredColorScheme(.dark)
+            
           //  .environmentObject(CartManager())
 
     }

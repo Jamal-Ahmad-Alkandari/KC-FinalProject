@@ -13,11 +13,11 @@ struct AdressModle: Identifiable {
     
     var state : String
     var area : String
-    var block : Int
+    var block : String
     var street : String
-    var house : Int
-    var floor : Int
-    var apartment : Int
+    var house : String
+    var floor : String
+    var apartment : String
 
 }
 

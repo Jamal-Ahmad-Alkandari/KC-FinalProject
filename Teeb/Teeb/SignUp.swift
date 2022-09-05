@@ -17,12 +17,16 @@ struct SignUp: View { // Struct -->
     @State var PhoneNum : String
     @State var state : String
     @State var area : String
-    @State var block : Int
+    @State var block : String
     @State var street : String
-    @State var house : Int
-    @State var floor : Int
-    @State var apartment : Int
+    @State var house : String
+    @State var floor : String
+    @State var apartment : String
     
+    @State var House = false
+    
+    @State var selected = "house"
+    @State var selected1 = "building.2"
     
     @Environment(\.dismiss) private var dismiss
     
@@ -37,72 +41,148 @@ struct SignUp: View { // Struct -->
             Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1))
                 .ignoresSafeArea()
             
-            VStack{ // Vstack -->
-                
-                TextField("First Name", text: $FirstName)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .cornerRadius(5)
-                
-                TextField("Last Name", text: $LastName)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .cornerRadius(5)
-                
-                TextField("E-mail", text: $Email)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .cornerRadius(5)
-                
-                SecureField("Password", text: $Password)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .cornerRadius(5)
-                
-                SecureField("Confirm Password", text: $ConPass)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .cornerRadius(5)
-                
-                TextField("Phone Number", text: $PhoneNum)
-                    .textFieldStyle(.roundedBorder)
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .cornerRadius(5)
-                
-                
-                VStack{ // Address Stack -->
+           
+                ScrollView{ // Scroll View -->
                     
-                    HStack {
-                        Image(systemName: "house")
-                            .padding()
-                            .foregroundColor(.white)
-                            .font(.system(size: 35))
-                            .background(Color.white.opacity(0.26))
-                            .cornerRadius(10)
+                    TextField("First Name", text: $FirstName)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .cornerRadius(5)
+                    
+                    TextField("Last Name", text: $LastName)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .cornerRadius(5)
+                    
+                    TextField("E-mail", text: $Email)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .cornerRadius(5)
+                    
+                    SecureField("Password", text: $Password)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .cornerRadius(5)
+                    
+                    SecureField("Confirm Password", text: $ConPass)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .cornerRadius(5)
+                    
+                    TextField("Phone Number", text: $PhoneNum)
+                        .textFieldStyle(.roundedBorder)
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .cornerRadius(5)
+                        .keyboardType(.numberPad)
+                    
+                    VStack{ // Address Stack -->
                         
-                        Image(systemName: "building.2")
-                            .padding()
-                            .foregroundColor(.white)
-                            .font(.system(size: 35))
-                            .background(Color.white.opacity(0.26))
-                            .cornerRadius(10)
-                    }
+                        HStack { // Hstack -->
+                            Image(systemName: selected)
+                                .padding()
+                                .foregroundColor(.white)
+                                .font(.system(size: 35))
+                                .background(Color.white.opacity(0.26))
+                                .cornerRadius(10)
+                                .onTapGesture {
+                                    House = true
+                                    selected = "house.fill"
+                                    selected1 = "building.2"
+                                    
+                                }
+                               
+                            
+                            
+                            Image(systemName: selected1)
+                                .padding()
+                                .foregroundColor(.white)
+                                .font(.system(size: 35))
+                                .background(Color.white.opacity(0.26))
+                                .cornerRadius(10)
+                                .onTapGesture {
+                                    House = false
+                                    selected1 = "building.2.fill"
+                                    selected = "house"
+                                }
+                            
+                          
+                            
+                        } // Hstack <--
+                        
+                        HStack{ // Hstack -->
+                            TextField("State", text: $state)
+                                .textFieldStyle(.roundedBorder)
+                                .font(.system(size: 25))
+                                .frame(width: 170)
+                                .cornerRadius(5)
+                            
+                            TextField("Area", text: $area)
+                                .textFieldStyle(.roundedBorder)
+                                .font(.system(size: 25))
+                                .frame(width: 170)
+                                .cornerRadius(5)
+                            
+                        } // Hstack <--
+                        
+                        HStack{ // Hstack -->
+                            TextField("Block", text: $block)
+                                .textFieldStyle(.roundedBorder)
+                                .font(.system(size: 25))
+                                .frame(width: 170)
+                                .cornerRadius(5)
+                                .keyboardType(.numberPad)
+                            
+                            TextField("Street", text: $street)
+                                .textFieldStyle(.roundedBorder)
+                                .font(.system(size: 25))
+                                .frame(width: 170)
+                                .cornerRadius(5)
+                                .keyboardType(.numberPad)
+                            
+                        } // Hstack <--
+                        
+                        HStack{ // Hstack -->
+                            TextField("House", text: $house)
+                                .textFieldStyle(.roundedBorder)
+                                .font(.system(size: 25))
+                                .frame(width: 170)
+                                .cornerRadius(5)
+                                .keyboardType(.numberPad)
+                            
+                        } // Hstack <--
+                        
+                        if House == false {
+                            HStack{ // Hstack -->
+                                TextField("Floor", text: $floor)
+                                    .textFieldStyle(.roundedBorder)
+                                    .font(.system(size: 25))
+                                    .frame(width: 170)
+                                    .cornerRadius(5)
+                                    .keyboardType(.numberPad)
+                                
+                                TextField("Apartment", text: $apartment)
+                                    .textFieldStyle(.roundedBorder)
+                                    .font(.system(size: 25))
+                                    .frame(width: 170)
+                                    .cornerRadius(5)
+                                    .keyboardType(.numberPad)
+                                
+                            }
+                        } else {
+                            /*@START_MENU_TOKEN@*/EmptyView()/*@END_MENU_TOKEN@*/
+                        } // Hstack <--
+                        
+                        
+                    } // Address Stack <--
                     
+                    Spacer()
                     
-                    
-                    
-                    
-                } // Address Stack <--
-                
-                Spacer()
-                
-               
                     Text("Set Profile")
                         .font(.system(size:30, design: .serif))
                         .foregroundColor(.white)
@@ -111,22 +191,18 @@ struct SignUp: View { // Struct -->
                         .cornerRadius(10)
                         .onTapGesture {
                             dismiss()
+                            
+                            accounts.append(AccountModle(FirstName: FirstName, LastName: LastName, Email: Email, Password: Password, ConPass: ConPass, PhoneNum: PhoneNum, adress: [AdressModle(state: state, area: area, block: block, street: street, house: house, floor: floor, apartment: apartment)]))
+                            
                         }
+                    
+                    
+                      
+                }
+                // Scroll View <--
                 
-                
-                
-            }
-            .padding()
-            // Vstack <--
-            
-            
-            
-            
-            
-            
-            
-            
-            
+              
+
             
         } // Zstack <--
         
@@ -141,8 +217,8 @@ struct SignUp: View { // Struct -->
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp(Email: .constant(""), Password: .constant(""), PhoneNum: "", state: "", area: "", block: 1, street: "", house: 1, floor: 1, apartment: 1)
+        SignUp(Email: .constant(""), Password: .constant(""), PhoneNum: "", state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "")
             .previewDevice("iPhone 12 Pro")
-            .preferredColorScheme(.dark)
+            
     }
 }
