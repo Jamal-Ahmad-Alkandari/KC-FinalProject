@@ -11,7 +11,7 @@ import SwiftUI
 struct TeebApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(Email: "", Password: "")
         }
     }
 }

@@ -96,24 +96,43 @@ struct CartPage: View { // Struct -->
             .navigationTitle(Text("My Cart"))
         .padding(.top)
             
-            if productNum >= 0 {
-                Text("Product Amount : \(productNum)")
-                    .padding()
-                    .font(.system(size: 25))
-                    .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                    .foregroundColor(.white)
-                .cornerRadius(10)
+            VStack{ // Vstack -->
+                
+                HStack{ // Product Amount Stack -->
+                    if productNum >= 0 {
+                        Text("Product Amount :")
+                            .font(.system(size: 25))
+                            .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                        .cornerRadius(10)
+                        
+                        Spacer()
+                        
+                        Text("\(productNum)")
+                            .font(.system(size: 25))
+                            .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                        .cornerRadius(10)
+                    }
+                }.padding()
+                // Product Amount Stack <--
+              
+                HStack{ // Total Stack -->
+                    Text("Total Amount :")
+                        .font(.system(size: 25))
+                        .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                        .cornerRadius(10)
+                    
+                    Spacer()
+                    
+                    Text("\(total, specifier: "%.3f") K.D")
+                        .font(.system(size: 25))
+                        .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                        .cornerRadius(10)
+                }.padding()
+                // Total Stack <--
+
             }
-            Spacer()
-            
-            
-            Text("Total Amount : \(total, specifier: "%.3f") K.D")
-                .padding()
-                .font(.system(size: 25))
-                .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                .foregroundColor(.white)
-                .cornerRadius(10)
-            Spacer()
+            .padding()
+            // Vstack <--
             
             
             NavigationLink {
@@ -126,7 +145,6 @@ struct CartPage: View { // Struct -->
                     .foregroundColor(.white)
                 .cornerRadius(10)
             }
-            Spacer()
             
             
             

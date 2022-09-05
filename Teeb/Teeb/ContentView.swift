@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View { // Content View -->
     
-    @State var Email = ""
-    @State var Passwoord = ""
+    @State var Email : String
+    @State var Password : String
     
     
     var body: some View { // Body -->
@@ -59,7 +59,7 @@ struct ContentView: View { // Content View -->
                         .cornerRadius(5)
                
                     
-                    SecureField("Password", text: $Passwoord)
+                    SecureField("Password", text: $Password)
                          .padding()
                          .background(.white)
                          .cornerRadius(5)
@@ -82,7 +82,7 @@ struct ContentView: View { // Content View -->
 
                         } // Navigation Link <--
                         
-                       NavigationLink(destination: SignUp().navigationTitle("Sign Up")){ // Navigation Link -->
+                        NavigationLink(destination: SignUp(Email: $Email, Password: $Password, PhoneNum: "", state: "", area: "", block: 1, street: "", house: 1, floor: 1, apartment: 1).navigationTitle("Sign Up")){ // Navigation Link -->
                             Text("Sign Up")
                                .font(.system(size:30, design: .serif))
                                .foregroundColor(.white)
@@ -124,7 +124,7 @@ struct ContentView: View { // Content View -->
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(Email: "", Password: "")
             .previewDevice("iPhone 12 Pro")
     }
 }
