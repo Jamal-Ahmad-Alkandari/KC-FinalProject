@@ -20,6 +20,8 @@
 		21BB796328BEA83A005A7D9D /* CartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796228BEA83A005A7D9D /* CartPage.swift */; };
 		21BB796928C38799005A7D9D /* CheckOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796828C38799005A7D9D /* CheckOut.swift */; };
 		21BB796B28C401C3005A7D9D /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796A28C401C3005A7D9D /* SignUp.swift */; };
+		21BB796D28C64E0F005A7D9D /* AccountModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796C28C64E0F005A7D9D /* AccountModle.swift */; };
+		21BB796F28C64F4D005A7D9D /* AdrtessModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796E28C64F4D005A7D9D /* AdrtessModle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		21BB796228BEA83A005A7D9D /* CartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPage.swift; sourceTree = "<group>"; };
 		21BB796828C38799005A7D9D /* CheckOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOut.swift; sourceTree = "<group>"; };
 		21BB796A28C401C3005A7D9D /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		21BB796C28C64E0F005A7D9D /* AccountModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModle.swift; sourceTree = "<group>"; };
+		21BB796E28C64F4D005A7D9D /* AdrtessModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdrtessModle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,9 @@
 				21BB796228BEA83A005A7D9D /* CartPage.swift */,
 				21BB794F28BBD373005A7D9D /* Shopping.swift */,
 				21BB796828C38799005A7D9D /* CheckOut.swift */,
+				21BB796C28C64E0F005A7D9D /* AccountModle.swift */,
 				21BB796A28C401C3005A7D9D /* SignUp.swift */,
+				21BB796E28C64F4D005A7D9D /* AdrtessModle.swift */,
 				21BB793D28BABE4A005A7D9D /* Assets.xcassets */,
 				21BB793F28BABE4A005A7D9D /* Preview Content */,
 			);
@@ -187,6 +193,8 @@
 				21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */,
 				21BB793C28BABE48005A7D9D /* ContentView.swift in Sources */,
 				21BB793A28BABE48005A7D9D /* TeebApp.swift in Sources */,
+				21BB796D28C64E0F005A7D9D /* AccountModle.swift in Sources */,
+				21BB796F28C64F4D005A7D9D /* AdrtessModle.swift in Sources */,
 				21BB796B28C401C3005A7D9D /* SignUp.swift in Sources */,
 				21BB796928C38799005A7D9D /* CheckOut.swift in Sources */,
 			);
@@ -317,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teeb/Preview Content\"";
+				DEVELOPMENT_TEAM = KGH7HUWYA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Teeb/Info.plist;
@@ -346,6 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Teeb/Preview Content\"";
+				DEVELOPMENT_TEAM = KGH7HUWYA9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Teeb/Info.plist;

@@ -24,6 +24,9 @@ struct SignUp: View { // Struct -->
     @State var apartment : Int
     
     
+    @Environment(\.dismiss) private var dismiss
+    
+    
     
     
     var body: some View { // Body -->
@@ -37,34 +40,40 @@ struct SignUp: View { // Struct -->
             VStack{ // Vstack -->
                 
                 TextField("First Name", text: $FirstName)
-                    .padding()
-                    .background(.white)
-                .cornerRadius(5)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 25))
+                    .frame(width: 350)
+                    .cornerRadius(5)
                 
                 TextField("Last Name", text: $LastName)
-                    .padding()
-                    .background(.white)
-                .cornerRadius(5)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 25))
+                    .frame(width: 350)
+                    .cornerRadius(5)
                 
                 TextField("E-mail", text: $Email)
-                    .padding()
-                    .background(.white)
-                .cornerRadius(5)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 25))
+                    .frame(width: 350)
+                    .cornerRadius(5)
                 
                 SecureField("Password", text: $Password)
-                     .padding()
-                     .background(.white)
-                     .cornerRadius(5)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 25))
+                    .frame(width: 350)
+                    .cornerRadius(5)
                 
                 SecureField("Confirm Password", text: $ConPass)
-                     .padding()
-                     .background(.white)
-                     .cornerRadius(5)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 25))
+                    .frame(width: 350)
+                    .cornerRadius(5)
                 
                 TextField("Phone Number", text: $PhoneNum)
-                    .padding()
-                    .background(.white)
-                .cornerRadius(5)
+                    .textFieldStyle(.roundedBorder)
+                    .font(.system(size: 25))
+                    .frame(width: 350)
+                    .cornerRadius(5)
                 
                 
                 VStack{ // Address Stack -->
@@ -85,7 +94,7 @@ struct SignUp: View { // Struct -->
                             .cornerRadius(10)
                     }
                     
-                   
+                    
                     
                     
                     
@@ -93,16 +102,17 @@ struct SignUp: View { // Struct -->
                 
                 Spacer()
                 
-                NavigationLink (destination: {
-                    ContentView(Email: Email, Password: Password)
-                }, label: {
+               
                     Text("Set Profile")
-                       .font(.system(size:30, design: .serif))
-                       .foregroundColor(.white)
-                       .padding()
-                       .background(Color(#colorLiteral(red: 0.3985515237, green: 0.277300179, blue: 0.0639796108, alpha: 1)).opacity(0.85))
-                       .cornerRadius(10)
-                })
+                        .font(.system(size:30, design: .serif))
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color(#colorLiteral(red: 0.3985515237, green: 0.277300179, blue: 0.0639796108, alpha: 1)).opacity(0.85))
+                        .cornerRadius(10)
+                        .onTapGesture {
+                            dismiss()
+                        }
+                
                 
                 
             }
@@ -111,8 +121,8 @@ struct SignUp: View { // Struct -->
             
             
             
-         
-                        
+            
+            
             
             
             
@@ -120,7 +130,7 @@ struct SignUp: View { // Struct -->
             
         } // Zstack <--
         
-     
+        
         
         
     } // Body <--
@@ -132,5 +142,7 @@ struct SignUp: View { // Struct -->
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
         SignUp(Email: .constant(""), Password: .constant(""), PhoneNum: "", state: "", area: "", block: 1, street: "", house: 1, floor: 1, apartment: 1)
+            .previewDevice("iPhone 12 Pro")
+            .preferredColorScheme(.dark)
     }
 }

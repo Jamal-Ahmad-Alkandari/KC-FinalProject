@@ -21,35 +21,35 @@ struct CheckOut: View {
             
             VStack{ // Vstack -->
                 Image("Thanks Image")
-                     .resizable()
-                     .scaledToFit()
-                     .clipShape(Circle())
-                     .frame(width: 350, height: 350)
-                 
-                 ScrollView{ // Scroll View -->
-                     ForEach (Items) { product in  // Product For Each -->
-                     
-                         
-                         HStack{
-                             
-                         Text(product.productName)
-                             .font(.system(size: 20))
-                             .foregroundColor(.white)
-                         Spacer()
-                         
-                         Text("\(product.price, specifier: "%.3f") K.D")
-                                 .font(.system(size: 20))
-                                 .foregroundColor(.white)
-                             
-                         }
-                         .padding()
-                         .background(Color.white.opacity(0.26))
-                   
+                    .resizable()
+                    .scaledToFit()
+                    .clipShape(Circle())
+                    .frame(width: 250, height: 250)
+                
+                ScrollView{ // Scroll View -->
+                    ForEach (Items) { product in  // Product For Each -->
+                        
+                        
+                        HStack{
+                            
+                            Text(product.productName)
+                                .font(.system(size: 20))
+                                .foregroundColor(.white)
+                            Spacer()
+                            
+                            Text("\(product.price, specifier: "%.3f") K.D")
+                                .font(.system(size: 20))
+                                .foregroundColor(.white)
+                            
+                        }
+                        .padding()
+                        .background(Color.white.opacity(0.26))
+                        
+                        
+                        
+                    } // Product For Each <--
                     
-                     
-                     } // Product For Each <--
-                   
-                 } // Scroll View <--
+                } // Scroll View <--
                 Text("Total Amount : \(total, specifier: "%.3f") K.D")
                     .fontWeight(.heavy)
                     .font(.system(size: 25))
@@ -58,13 +58,13 @@ struct CheckOut: View {
                     .cornerRadius(10)
                     .frame(width: 400, height: 100)
                     .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-
+                
                 
             } // Vstack <--
             
-          
             
-           
+            
+            
         } // Zstack <--
         
         

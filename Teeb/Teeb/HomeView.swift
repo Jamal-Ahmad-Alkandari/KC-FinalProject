@@ -64,6 +64,7 @@ struct HomeView: View { // Home View -->
             
             
         }.listRowBackground(Color(#colorLiteral(red: 0.6868260503, green: 0.5022583008, blue: 0, alpha: 1)))
+            .navigationTitle("Teeb Stores")
         // List <--
         
         

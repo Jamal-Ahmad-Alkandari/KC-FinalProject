@@ -101,14 +101,14 @@ struct CartPage: View { // Struct -->
                 HStack{ // Product Amount Stack -->
                     if productNum >= 0 {
                         Text("Product Amount :")
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
                             .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                         .cornerRadius(10)
                         
                         Spacer()
                         
                         Text("\(productNum)")
-                            .font(.system(size: 25))
+                            .font(.system(size: 20))
                             .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                         .cornerRadius(10)
                     }
@@ -117,14 +117,14 @@ struct CartPage: View { // Struct -->
               
                 HStack{ // Total Stack -->
                     Text("Total Amount :")
-                        .font(.system(size: 25))
+                        .font(.system(size: 20))
                         .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                         .cornerRadius(10)
                     
                     Spacer()
                     
                     Text("\(total, specifier: "%.3f") K.D")
-                        .font(.system(size: 25))
+                        .font(.system(size: 20))
                         .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                         .cornerRadius(10)
                 }.padding()
@@ -141,14 +141,12 @@ struct CartPage: View { // Struct -->
                 Text("Check out")
                     .padding()
                     .font(.system(size: 25))
+                    .frame(width: 350)
                     .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                     .foregroundColor(.white)
-                .cornerRadius(10)
+                .cornerRadius(12)
             }
-            
-            
-            
-            
+     
         } // Vstack <--
        
         
@@ -163,6 +161,7 @@ struct CartPage_Previews: PreviewProvider {
     static var previews: some View {
 
         CartPage(productNum: .constant(0), total: .constant(0.000), Items: .constant([ProductModle(productImage: "جوره دبل سوبر", productName: "جوره دبل سوبر", price: 25)]), shop: ShopsModle(name: "Terengganu", logo: "Terengganu logo", products: []), action: {})
+            .preferredColorScheme(.dark)
           //  .environmentObject(CartManager())
 
     }
