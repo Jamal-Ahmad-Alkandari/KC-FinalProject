@@ -29,125 +29,128 @@ struct CartPage: View { // Struct -->
     var body: some View { // Body -->
         
         
-        VStack { // Vstack -->
+
             
             
-            
-            
-            ScrollView{ // Scroll View -->
+            VStack { // Vstack -->
                 
                 
                 
-                ForEach (Items) { product in  // Product For Each -->
+                
+                ScrollView{ // Scroll View -->
+                    
+                    
+                    
+                    ForEach (Items) { product in  // Product For Each -->
+                            
+                            
+                       
                         
+                        
+                        HStack{ // Hstack -->
+                            
+                            Image(product.productImage)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 100, height: 100 )
+                                .cornerRadius(10)
+                            Spacer()
+                            
+                            Text(product.productName)
+                                .font(.system(size: 20))
+                            Spacer()
+                            
+                            Text("\(product.price, specifier: "%.3f") K.D")
+                            Spacer()
+                            
+                            Image(systemName: "trash")
+                                .font(.system(size: 25))
+                                .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                                .onTapGesture { // On Tap -->
+                                    
+                                  
+                                    
+                                    if let index = Items.firstIndex(of: product){ // if -->
+                                        
+                                        Items.remove(at: index)
+                                        
+                                    } // if <--
+                                    else{ // else -->
+                                        print("No Item")
+                                    } // else <--
+                                    
+                                    total -= product.price
+                                    productNum -= 1
+                                    
+
+                                } // On Tap <--
+                            
+                        } // Hstack <--
+                        
+                        } // Product For Each <--
                         
                    
+               
+                  
                     
+                   
                     
-                    HStack{ // Hstack -->
-                        
-                        Image(product.productImage)
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 100, height: 100 )
+                }.padding()  // ScrollView <--
+                .navigationTitle(Text("My Cart"))
+            .padding(.top)
+                
+                VStack{ // Vstack -->
+                    
+                    HStack{ // Product Amount Stack -->
+                        if productNum >= 0 {
+                            Text("Product Amount :")
+                                .font(.system(size: 20))
+                                .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
                             .cornerRadius(10)
-                        Spacer()
-                        
-                        Text(product.productName)
+                            
+                            Spacer()
+                            
+                            Text("\(productNum)")
+                                .font(.system(size: 20))
+                                .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                            .cornerRadius(10)
+                        }
+                    }.padding()
+                    // Product Amount Stack <--
+                  
+                    HStack{ // Total Stack -->
+                        Text("Total Amount :")
                             .font(.system(size: 20))
-                        Spacer()
-                        
-                        Text("\(product.price, specifier: "%.3f") K.D")
-                        Spacer()
-                        
-                        Image(systemName: "trash")
-                            .font(.system(size: 25))
                             .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                            .onTapGesture { // On Tap -->
-                                
-                              
-                                
-                                if let index = Items.firstIndex(of: product){ // if -->
-                                    
-                                    Items.remove(at: index)
-                                    
-                                } // if <--
-                                else{ // else -->
-                                    print("No Item")
-                                } // else <--
-                                
-                                total -= product.price
-                                productNum -= 1
-                                
+                            .cornerRadius(10)
+                        
+                        Spacer()
+                        
+                        Text("\(total, specifier: "%.3f") K.D")
+                            .font(.system(size: 20))
+                            .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                            .cornerRadius(10)
+                    }.padding()
+                    // Total Stack <--
 
-                            } // On Tap <--
-                        
-                    } // Hstack <--
-                    
-                    } // Product For Each <--
-                    
-               
-           
-              
+                }
+                .padding()
+                // Vstack <--
                 
-               
                 
-            }.padding()  // ScrollView <--
-            .navigationTitle(Text("My Cart"))
-        .padding(.top)
-            
-            VStack{ // Vstack -->
-                
-                HStack{ // Product Amount Stack -->
-                    if productNum >= 0 {
-                        Text("Product Amount :")
-                            .font(.system(size: 20))
-                            .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                        .cornerRadius(10)
-                        
-                        Spacer()
-                        
-                        Text("\(productNum)")
-                            .font(.system(size: 20))
-                            .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                        .cornerRadius(10)
-                    }
-                }.padding()
-                // Product Amount Stack <--
-              
-                HStack{ // Total Stack -->
-                    Text("Total Amount :")
-                        .font(.system(size: 20))
-                        .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                        .cornerRadius(10)
-                    
-                    Spacer()
-                    
-                    Text("\(total, specifier: "%.3f") K.D")
-                        .font(.system(size: 20))
-                        .foregroundColor(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                        .cornerRadius(10)
-                }.padding()
-                // Total Stack <--
-
-            }
-            .padding()
-            // Vstack <--
-            
-            
-            NavigationLink {
-                CheckOut(total: $total, Items: $Items, shop: shop)
-            }label : {
-                Text("Check out")
-                    .padding()
-                    .font(.system(size: 25))
-                    .frame(width: 350)
-                    .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
-                    .foregroundColor(.white)
-                .cornerRadius(12)
-            }
-     
-        } // Vstack <--
+                NavigationLink {
+                    CheckOut(total: $total, Items: $Items, shop: shop)
+                }label : {
+                    Text("Check out")
+                        .padding()
+                        .font(.system(size: 25))
+                        .frame(width: 350)
+                        .background(Color(#colorLiteral(red: 0.6594367623, green: 0.5036250353, blue: 0.05267035216, alpha: 1)))
+                        .foregroundColor(.white)
+                    .cornerRadius(12)
+                }
+         
+            }// Vstack <--
        
         
         

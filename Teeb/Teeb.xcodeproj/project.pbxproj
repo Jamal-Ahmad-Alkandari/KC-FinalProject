@@ -23,6 +23,7 @@
 		21BB796D28C64E0F005A7D9D /* AccountModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796C28C64E0F005A7D9D /* AccountModle.swift */; };
 		21BB796F28C64F4D005A7D9D /* AdrtessModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB796E28C64F4D005A7D9D /* AdrtessModle.swift */; };
 		21BB797128C6AFA2005A7D9D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB797028C6AFA2005A7D9D /* ProfileView.swift */; };
+		21BB797328C73ACE005A7D9D /* tabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB797228C73ACE005A7D9D /* tabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		21BB796C28C64E0F005A7D9D /* AccountModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModle.swift; sourceTree = "<group>"; };
 		21BB796E28C64F4D005A7D9D /* AdrtessModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdrtessModle.swift; sourceTree = "<group>"; };
 		21BB797028C6AFA2005A7D9D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		21BB797228C73ACE005A7D9D /* tabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				21BB796C28C64E0F005A7D9D /* AccountModle.swift */,
 				21BB796A28C401C3005A7D9D /* SignUp.swift */,
 				21BB797028C6AFA2005A7D9D /* ProfileView.swift */,
+				21BB797228C73ACE005A7D9D /* tabBar.swift */,
 				21BB796E28C64F4D005A7D9D /* AdrtessModle.swift */,
 				21BB793D28BABE4A005A7D9D /* Assets.xcassets */,
 				21BB793F28BABE4A005A7D9D /* Preview Content */,
@@ -195,6 +198,7 @@
 				21BB794E28BBB72A005A7D9D /* ProductModle.swift in Sources */,
 				21BB797128C6AFA2005A7D9D /* ProfileView.swift in Sources */,
 				21BB794C28BBB60B005A7D9D /* ShopsModle.swift in Sources */,
+				21BB797328C73ACE005A7D9D /* tabBar.swift in Sources */,
 				21BB793C28BABE48005A7D9D /* ContentView.swift in Sources */,
 				21BB793A28BABE48005A7D9D /* TeebApp.swift in Sources */,
 				21BB796D28C64E0F005A7D9D /* AccountModle.swift in Sources */,

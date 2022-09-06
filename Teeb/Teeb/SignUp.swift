@@ -28,6 +28,10 @@ struct SignUp: View { // Struct -->
     @State var selected = "house"
     @State var selected1 = "building.2"
     
+    
+    @State private var showingAlert = false
+
+    
     @Environment(\.dismiss) private var dismiss
     
     
@@ -79,7 +83,7 @@ struct SignUp: View { // Struct -->
                         .font(.system(size: 25))
                         .frame(width: 350)
                         .cornerRadius(5)
-                        .keyboardType(.numberPad)
+                        .keyboardType(.phonePad)
                     
                     VStack{ // Address Stack -->
                         
@@ -189,11 +193,31 @@ struct SignUp: View { // Struct -->
                         .background(Color(#colorLiteral(red: 0.3985515237, green: 0.277300179, blue: 0.0639796108, alpha: 1)).opacity(0.85))
                         .cornerRadius(10)
                         .onTapGesture {
-                            dismiss()
+                          
                             
-                            accounts.append(AccountModle(FirstName: FirstName, LastName: LastName, Email: Email, Password: Password, ConPass: ConPass, PhoneNum: PhoneNum, adress: [AdressModle(state: state, area: area, block: block, street: street, house: house, floor: floor, apartment: apartment)]))
+                            
+                            if Password != ConPass { // if -->
+                                showingAlert.toggle()
+                            } // if <--
+                            else{
+                             
+                                
+                                accounts.append(AccountModle(FirstName: FirstName, LastName: LastName, Email: Email, Password: Password, ConPass: ConPass, PhoneNum: PhoneNum, adress: [AdressModle(state: state, area: area, block: block, street: street, house: house, floor: floor, apartment: apartment)]))
+                                
+                                dismiss()
+                                
+                                
+                            }
+                       
+                            
+                         
                             
                         }
+                        .alert(isPresented: $showingAlert){ // Alert -->
+                            Alert(title: Text ("Something went wrong"),
+                            message:
+                            Text("Please Confirm Your Password"),
+                                  dismissButton: .default (Text ("Dismiss")) )} // Alert <--
                     
                     
                       

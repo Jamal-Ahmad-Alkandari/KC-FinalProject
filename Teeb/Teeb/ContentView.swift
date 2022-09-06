@@ -14,6 +14,10 @@ struct ContentView: View { // Content View -->
     @State private var showingAlert = false
     @State var islogin = false
     
+    
+   
+    
+    
     var body: some View { // Body -->
         
         NavigationView{ // Navigation View -->
@@ -132,7 +136,7 @@ struct ContentView: View { // Content View -->
             }
             
             else {
-                HomeView()
+                tabBar(Account: AccountModle(FirstName: "", LastName: "", Email: "", Password: "", ConPass: "", PhoneNum: "", adress: [AdressModle(state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "")]), Adress:AdressModle(state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "") )
             }
             
             
