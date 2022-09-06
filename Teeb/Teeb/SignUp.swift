@@ -23,13 +23,15 @@ struct SignUp: View { // Struct -->
     @State var floor : String
     @State var apartment : String
     
-    @State var House = false
+    @State var House = true
     
     @State var selected = "house"
     @State var selected1 = "building.2"
     
     
     @State private var showingAlert = false
+    @State private var alert = false
+
 
     
     @Environment(\.dismiss) private var dismiss
@@ -113,6 +115,7 @@ struct SignUp: View { // Struct -->
                                     House = false
                                     selected1 = "building.2.fill"
                                     selected = "house"
+                                    
                                 }
                             
                           
@@ -199,6 +202,23 @@ struct SignUp: View { // Struct -->
                             if Password != ConPass { // if -->
                                 showingAlert.toggle()
                             } // if <--
+                            
+                            else if FirstName == "" || LastName == "" || Email == "" || Password == "" || ConPass == "" || PhoneNum == "" || state == "" || area == "" || house == "" {
+                                
+                                alert.toggle()
+                                
+                            }
+                            
+                            
+                            else if House == false && floor == ""  {
+                                alert.toggle()
+                            }
+                            
+                            else if House == false && apartment == ""  {
+                                alert.toggle()
+                            }
+                            
+                            
                             else{
                              
                                 
@@ -217,6 +237,11 @@ struct SignUp: View { // Struct -->
                             Alert(title: Text ("Something went wrong"),
                             message:
                             Text("Please Confirm Your Password"),
+                                  dismissButton: .default (Text ("Dismiss")) )} // Alert <--
+                        .alert(isPresented: $alert){ // Alert -->
+                            Alert(title: Text ("Something went wrong"),
+                            message:
+                            Text("Please fill in the blank areas"),
                                   dismissButton: .default (Text ("Dismiss")) )} // Alert <--
                     
                     

@@ -74,5 +74,6 @@ struct CheckOut: View {
 struct CheckOut_Previews: PreviewProvider {
     static var previews: some View {
         CheckOut(total: .constant(0.000), Items: .constant([ProductModle(productImage: "جوره دبل سوبر", productName: "جوره دبل سوبر", price: 25)]), shop: ShopsModle(name: "Terengganu", logo: "Terengganu logo", products: []))
+            .previewDevice("iPhone 12 Pro")
     }
 }

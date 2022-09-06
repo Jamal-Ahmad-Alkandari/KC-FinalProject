@@ -50,9 +50,17 @@ var kinnah = ShopsModle(name: "Kinnah", logo: "Kinnah logo", products: [
     ProductModle(productImage: "كمبودي", productName: "كمبودي", price: 250)
     ])
 
+var KJ = ShopsModle(name: "Kesra & Jamra", logo: "Kesra & Jamra logo", products:[
+    ProductModle(productImage: "البونتيانك", productName: "البونتيانك", price: 25),
+    ProductModle(productImage: "السيوفي", productName: "السيوفي", price: 15),
+    ProductModle(productImage: "القرميد", productName: "القرميد", price: 10),
+    ProductModle(productImage: "الكاوياي", productName: "الكاوياي", price: 40),
+                        ])
 
 
-var shops = [Terengganu , WoodChips, kinnah]
+//// القرميد
+
+var shops = [Terengganu , WoodChips, kinnah, KJ]
 
 
 
