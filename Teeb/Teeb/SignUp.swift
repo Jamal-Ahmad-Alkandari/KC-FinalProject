@@ -25,7 +25,7 @@ struct SignUp: View { // Struct -->
     
     @State var House = true
     
-    @State var selected = "house"
+    @State var selected = "house.fill"
     @State var selected1 = "building.2"
     
     
@@ -115,7 +115,6 @@ struct SignUp: View { // Struct -->
                                     House = false
                                     selected1 = "building.2.fill"
                                     selected = "house"
-                                    
                                 }
                             
                           
@@ -199,22 +198,24 @@ struct SignUp: View { // Struct -->
                           
                             
                             
-                            if Password != ConPass { // if -->
+                           
+                            
+                             if FirstName == "" || LastName == "" || Email == "" || Password == "" || ConPass == "" || PhoneNum == "" || state == "" || area == "" || house == "" {
+                                
+                                alert.toggle()
+                                
+                            }
+                            
+                           else if Password != ConPass { // if -->
                                 showingAlert.toggle()
                             } // if <--
                             
-                            else if FirstName == "" || LastName == "" || Email == "" || Password == "" || ConPass == "" || PhoneNum == "" || state == "" || area == "" || house == "" {
-                                
-                                alert.toggle()
-                                
-                            }
                             
-                            
-                            else if House == false && floor == ""  {
+                            else if House == false && floor == "" {
                                 alert.toggle()
                             }
-                            
-                            else if House == false && apartment == ""  {
+                           
+                            else if House == false && apartment == "" {
                                 alert.toggle()
                             }
                             
@@ -241,7 +242,7 @@ struct SignUp: View { // Struct -->
                         .alert(isPresented: $alert){ // Alert -->
                             Alert(title: Text ("Something went wrong"),
                             message:
-                            Text("Please fill in the blank areas"),
+                            Text("Please Fill In The Blank Areas"),
                                   dismissButton: .default (Text ("Dismiss")) )} // Alert <--
                     
                     

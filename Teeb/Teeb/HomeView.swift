@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View { // Home View -->
     
+//    @State var welcome : String
+    
     
     var body: some View { // Body -->
 
@@ -60,7 +62,15 @@ struct HomeView: View { // Home View -->
                     
                     
                 }.listRowBackground(Color(#colorLiteral(red: 0.6868260503, green: 0.5022583008, blue: 0, alpha: 1)))
-                    .navigationTitle("Teeb Stores")
+                    .navigationTitle(Text("Teeb Stores"))
+                ForEach (accounts) { account in
+                    
+                        
+                    
+                    
+                }
+                
+                
                 // List <--
                 
                 
