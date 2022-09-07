@@ -14,6 +14,7 @@ struct ProfileView: View { // Struct -->
         
         VStack { // Zstack -->
            
+            ScrollView{ // Scroll View -->
             
             ZStack{ // Zstack -->
                 Color(#colorLiteral(red: 0.6868260503, green: 0.5022583008, blue: 0, alpha: 1)).ignoresSafeArea()
@@ -54,7 +55,7 @@ struct ProfileView: View { // Struct -->
                 
             } // Zstack <--
         
-            ScrollView{ // Scroll View -->
+          
                 
                 
                 

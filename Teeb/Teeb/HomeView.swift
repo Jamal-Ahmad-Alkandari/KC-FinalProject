@@ -42,6 +42,7 @@ struct HomeView: View { // Home View -->
                                 Spacer()
                                 Text(shop.name)
                                     .font(.system(size: 20))
+                                    .foregroundColor(.primary)
                                 Spacer()
                                 
                                 
@@ -92,7 +93,7 @@ struct HomeView: View { // Home View -->
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
             .previewDevice("iPhone 12 Pro")
     }
 }
