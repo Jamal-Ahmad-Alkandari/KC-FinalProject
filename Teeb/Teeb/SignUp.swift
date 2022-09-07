@@ -11,8 +11,8 @@ struct SignUp: View { // Struct -->
     
     @State var FirstName = ""
     @State var LastName = ""
-    @Binding var Email : String
-    @Binding var Password : String
+    @State var Email : String
+    @State var Password : String
     @State var ConPass = ""
     @State var PhoneNum : String
     @State var state : String
@@ -22,6 +22,7 @@ struct SignUp: View { // Struct -->
     @State var house : String
     @State var floor : String
     @State var apartment : String
+    @State var msg = "Something Went Wrong"
     
     @State var House = true
     
@@ -29,7 +30,6 @@ struct SignUp: View { // Struct -->
     @State var selected1 = "building.2"
     
     
-    @State private var showingAlert = false
     @State private var alert = false
 
 
@@ -194,28 +194,31 @@ struct SignUp: View { // Struct -->
                         .padding()
                         .background(Color(#colorLiteral(red: 0.3985515237, green: 0.277300179, blue: 0.0639796108, alpha: 1)).opacity(0.85))
                         .cornerRadius(10)
-                        .onTapGesture {
+                        .onTapGesture { // On Tap -->
                           
                             
                             
                            
                             
                              if FirstName == "" || LastName == "" || Email == "" || Password == "" || ConPass == "" || PhoneNum == "" || state == "" || area == "" || house == "" {
-                                
+                                msg = "Please Fill In The Blank Areas"
                                 alert.toggle()
                                 
                             }
                             
                            else if Password != ConPass { // if -->
-                                showingAlert.toggle()
+                               msg = "Please Confirm Your Password"
+                                alert.toggle()
                             } // if <--
                             
                             
                             else if House == false && floor == "" {
+                                msg = "Please Fill In The Blank Areas"
                                 alert.toggle()
                             }
                            
                             else if House == false && apartment == "" {
+                                msg = "Please Fill In The Blank Areas"
                                 alert.toggle()
                             }
                             
@@ -223,7 +226,7 @@ struct SignUp: View { // Struct -->
                             else{
                              
                                 
-                                accounts.append(AccountModle(FirstName: FirstName, LastName: LastName, Email: Email, Password: Password, ConPass: ConPass, PhoneNum: PhoneNum, adress: [AdressModle(state: state, area: area, block: block, street: street, house: house, floor: floor, apartment: apartment)]))
+                              MyAccount = AccountModle(FirstName: FirstName, LastName: LastName, Email: Email, Password: Password, ConPass: ConPass, PhoneNum: PhoneNum, adress: [AdressModle(state: state, area: area, block: block, street: street, house: house, floor: floor, apartment: apartment)])
                                 
                                 dismiss()
                                 
@@ -233,16 +236,11 @@ struct SignUp: View { // Struct -->
                             
                          
                             
-                        }
-                        .alert(isPresented: $showingAlert){ // Alert -->
-                            Alert(title: Text ("Something went wrong"),
-                            message:
-                            Text("Please Confirm Your Password"),
-                                  dismissButton: .default (Text ("Dismiss")) )} // Alert <--
+                        } // On Tap <--
                         .alert(isPresented: $alert){ // Alert -->
                             Alert(title: Text ("Something went wrong"),
                             message:
-                            Text("Please Fill In The Blank Areas"),
+                            Text(msg),
                                   dismissButton: .default (Text ("Dismiss")) )} // Alert <--
                     
                     
@@ -266,7 +264,7 @@ struct SignUp: View { // Struct -->
 
 struct SignUp_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp(Email: .constant(""), Password: .constant(""), PhoneNum: "", state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "")
+        SignUp(Email: "", Password: "", PhoneNum: "", state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "")
             .previewDevice("iPhone 12 Pro")
             
     }

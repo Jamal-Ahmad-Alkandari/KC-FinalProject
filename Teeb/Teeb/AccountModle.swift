@@ -11,7 +11,7 @@ struct AccountModle: Identifiable{
     let id = UUID()
     
     
-    var FirstName : String
+     var FirstName : String
      var LastName : String
      var Email : String
      var Password : String
@@ -23,3 +23,4 @@ struct AccountModle: Identifiable{
 }
 
 var accounts : [AccountModle] = []
+var MyAccount : AccountModle?

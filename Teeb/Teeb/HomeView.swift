@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View { // Home View -->
     
-//    @State var welcome : String
+    @State var welcome : String = (MyAccount?.FirstName ?? "")
     
     
     var body: some View { // Body -->
@@ -62,7 +62,7 @@ struct HomeView: View { // Home View -->
                     
                     
                 }.listRowBackground(Color(#colorLiteral(red: 0.6868260503, green: 0.5022583008, blue: 0, alpha: 1)))
-                    .navigationTitle(Text("Teeb Stores"))
+                    .navigationTitle(Text("Welcome \(welcome)"))
                 ForEach (accounts) { account in
                     
                         

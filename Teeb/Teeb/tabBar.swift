@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct tabBar: View {
-    
-    @State var Account : AccountModle
-    @State var Adress : AdressModle
-    
+     
+    init() {
+            UITabBar.appearance().backgroundColor = UIColor(Color("bar"))
+        }
 
     
     var body: some View {
@@ -23,15 +23,15 @@ struct tabBar: View {
                         HomeView()
                             .tabItem {
                                 Image(systemName: "house")
-                                   
-                            }
+               
+                            }.foregroundColor(.white)
                         ProfileView()
                             .tabItem {
                                 Image(systemName: "person")
-                                    
+                              
 
                             }
-                    }
+                    }.foregroundColor(.white)
     }
 }
 

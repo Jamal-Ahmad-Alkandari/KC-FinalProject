@@ -26,28 +26,26 @@ struct ProfileView: View { // Struct -->
                     
                     Spacer()
                     
-                    ForEach (accounts) { account in // For Each Account -->
-                        
+                   
                         VStack{
-                            Text("\(account.FirstName) \(account.LastName)")
+                            Text("\(MyAccount?.FirstName ?? "") \(MyAccount?.LastName ?? "")")
                                 .font(.system(size: 40, design: .serif))
                                 .foregroundColor(.white)
                                 Spacer()
                             
-                            Text("\(account.Email)")
+                            Text("\(MyAccount?.Email ?? "")")
                                 .font(.system(size: 25))
                                 .foregroundColor(.white)
                             
                             
-                            Text("\(account.PhoneNum)")
+                            Text("\(MyAccount?.PhoneNum ?? "")")
                                 .font(.system(size: 25))
                                 .foregroundColor(.white)
 
                             
                         }
                         
-                    } // For Each Account <--
-
+                  
                     
                 }.padding()
                 // Vstack <--
@@ -60,9 +58,9 @@ struct ProfileView: View { // Struct -->
                 
                 
                 
-                ForEach (accounts) { account in // For Each Account -->
+               
                     
-                    ForEach( account.adress) { adress in // For Each Adress -->
+                ForEach (MyAccount?.adress ?? []) { adress in // For Each Adress -->
                         
                         ZStack {
                             Color("white")
@@ -119,9 +117,7 @@ struct ProfileView: View { // Struct -->
                         
                     } // For Each Adress <--
                     
-                }
-                // For Each Account <--
-               
+              
                         
                       
                         

@@ -14,6 +14,8 @@ struct ContentView: View { // Content View -->
     @State private var showingAlert = false
     @State var islogin = false
     
+    @State var alert = ""
+    
     
    
     
@@ -88,22 +90,40 @@ struct ContentView: View { // Content View -->
                                 .cornerRadius(10)
                                 .onTapGesture { // ON Tap -->
                                     if Email == "" || Password == "" { // if -->
+                                        
+                                        alert = "Please Fill In The Blank Area"
+                                        
                                         showingAlert.toggle()
                                     } // if <--
-                                    else{
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    else if Email == MyAccount?.Email && Password == MyAccount?.Password{
+                                        
                                         islogin = true
                                     }
+                                    
+                                    
+                                    else {
+                                        
+                                        alert = "Please Enter A Correct Email And Password"
+                                        
+                                        showingAlert.toggle()
+                                    }
+                                    
                                 } // ON Tap <--
                                 .alert(isPresented: $showingAlert)
                                     { // Alert -->
                                     Alert(title: Text ("Something went wrong"),
                                     message:
-                                    Text("please fill in the blank areas"),
+                                    Text(alert),
                                           dismissButton: .default (Text ("Dismiss")) )} // Alert <--
                             
                      
                         
-                        NavigationLink(destination: SignUp(Email: $Email, Password: $Password, PhoneNum: "", state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "").navigationTitle("Sign Up")){ // Navigation Link -->
+                        NavigationLink(destination: SignUp(Email: "", Password: "", PhoneNum: "", state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "").navigationTitle("Sign Up")){ // Navigation Link -->
                             Text("Sign Up")
                                 .font(.system(size:30, design: .serif))
                                 .foregroundColor(.white)
@@ -136,7 +156,7 @@ struct ContentView: View { // Content View -->
             }
             
             else {
-                tabBar(Account: AccountModle(FirstName: "", LastName: "", Email: "", Password: "", ConPass: "", PhoneNum: "", adress: [AdressModle(state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "")]), Adress:AdressModle(state: "", area: "", block: "", street: "", house: "", floor: "", apartment: "") )
+                tabBar()
             }
             
             
